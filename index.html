@@ -16,7 +16,7 @@
     }
 
     body {
-      background: linear-gradient(-45deg, #1f1c2c, #928dab, #1f1c2c, #928dab);
+      background: linear-gradient(-45deg, #1f1c2c, #686479, #1f1c2c, #928dab);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
     }
@@ -94,7 +94,8 @@
       animation: slideUp 2s ease-out;
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4; /* Limiting description to 4 lines */
+      -webkit-line-clamp: 5; /* Limiting description to 4 lines */
+      line-clamp: 5; /* Standard property for compatibility */
       overflow: hidden;
     }
 
@@ -120,6 +121,11 @@
     @media (max-width: 768px) {
       h1 {
         font-size: 3rem;  /* Adjust font size for mobile */
+      }
+      .button-group{
+        display: flex;
+         /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
       }
 
       .description {

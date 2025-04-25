@@ -16,7 +16,7 @@
     }
 
     body {
-      background: linear-gradient(-45deg, #1f1c2c, #928dab, #1f1c2c, #928dab);
+      background: linear-gradient(-45deg, #1f1c2c, #686479, #1f1c2c, #928dab);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
     }
@@ -101,13 +101,26 @@
     /* Media Query for Mobile and Tablet */
     @media (max-width: 768px) {
       .contact-box {
-        display: block;
+        display: inline-block;
         width: 80%;
         margin: 1rem auto;
+      }
+      
+      #cnt1 {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          margin-left: 2rem;
+          text-align: center;
+
       }
 
       .center-content {
         text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 48%;
+        justify-content: center;
+        align-items: center;
       }
     }
 
@@ -172,7 +185,7 @@
   </div>
 
   <div class="center-content">
-    <h1>Projects</h1>
+    <h1 id="cnt1">Projects</h1>
     <div class="contact-box-container">
       <div class="contact-box">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="filter: invert(1);" />

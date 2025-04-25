@@ -16,7 +16,7 @@
     }
 
     body {
-      background: linear-gradient(-45deg, #1f1c2c, #928dab, #1f1c2c, #928dab);
+      background: linear-gradient(-45deg, #1f1c2c, #686479, #1f1c2c, #928dab);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
     }
@@ -104,14 +104,33 @@
         display: block;
         width: 80%;
         margin: 1rem auto;
+        justify-content: center;
+      }
+      #cnt{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        margin-left: 2rem;
+        text-align: center;
       }
 
       .center-content {
         text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 48%;
+        justify-content: center;
+        align-items: center;
+      }
+      .contact-box-container {
+        display: block;
+        margin-top: 2rem;
+        justify-content: center;
+        align-items: center;
       }
     }
+    
 
-    /* Media Query for Desktop */
+  
     @media (min-width: 769px) {
       .center-content {
         display: flex;
@@ -131,6 +150,7 @@
         margin-top: 2rem;
       }
     }
+
 
     #particles-js {
       position: fixed;
@@ -173,7 +193,7 @@
   </div>
 
   <div class="center-content">
-    <h1>You can contact through</h1>
+    <h1 id="cnt">Contacts</h1>
     <div class="contact-box-container">
       <div class="contact-box">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="filter: invert(1);" />
