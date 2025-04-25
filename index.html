@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asish's Portfolio</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #1f1c2c, #928dab, #1f1c2c, #928dab);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .center-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translate(-50%, -60%); }
+      100% { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 1rem 2rem 0;
+      padding: 0;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: white;
+      transition: width 0.3s ease;
+    }
+
+    .btn:hover {
+      color: #ffccff;
+    }
+
+    .btn:hover::after {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      animation: scaleUp 1.5s ease-in-out;
+      white-space: nowrap;  /* Prevent name from breaking into multiple lines */
+    }
+
+    @keyframes scaleUp {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .description {
+      font-size: 1.2rem;
+      color: #eee;
+      max-width: 900px; /* Ensures the description stays on one line */
+      margin: 0 auto 1rem;
+      animation: slideUp 2s ease-out;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4; /* Limiting description to 4 lines */
+      overflow: hidden;
+    }
+
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;  /* Adjust font size for mobile */
+      }
+
+      .description {
+        font-size: 1rem; /* Slightly smaller for mobile */
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.5rem;  /* Adjust font size for smaller screens */
+      }
+
+      .description {
+        font-size: 0.9rem; /* Adjust font size further for smaller screens */
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="center-content">
+    <h1>Asish Bindhani</h1>
+    <p class="description">Hi there, I'm Asish Bindhani, a passionate software developer exploring the power of code to solve real-world problems and create beautiful digital experiences using existing resources.</p>
+    <div class="button-group">
+      <a href="projects.html" class="btn">Projects</a>
+      <a href="contact.html" class="btn">Contacts</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80 },
+        "size": { "value": 3 },
+        "color": { "value": "#ffffff" },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

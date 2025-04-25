@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Asish</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #1f1c2c, #928dab, #1f1c2c, #928dab);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .center-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translate(-50%, -60%); }
+      100% { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      animation: scaleUp 1.5s ease-in-out;
+    }
+
+    @keyframes scaleUp {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .contact-box {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      margin: 1rem;
+      width: 250px;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: slideUp 1s ease-out;
+    }
+
+    .contact-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .contact-box img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-box:hover img {
+      transform: scale(1.2);
+    }
+
+    .contact-box a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Media Query for Mobile and Tablet */
+    @media (max-width: 768px) {
+      .contact-box {
+        display: block;
+        width: 80%;
+        margin: 1rem auto;
+      }
+
+      .center-content {
+        text-align: center;
+      }
+    }
+
+    /* Media Query for Desktop */
+    @media (min-width: 769px) {
+      .center-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .contact-box {
+        display: inline-block;
+        width: 200px;
+      }
+
+      .contact-box-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Styling for the Navigation Buttons */
+    .nav-btns {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+
+    .nav-btns a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      margin-left: 20px;
+      padding: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-btns a:hover {
+      color: #ffccff;
+      transform: translateX(5px);
+    }
+
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-btns">
+    <a href="index.html" class="btn">Home</a>
+    <a href="projects.html" class="btn">Projects</a>
+  </div>
+
+  <div class="center-content">
+    <h1>Contact Me</h1>
+    <div class="contact-box-container">
+      <div class="contact-box">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="filter: invert(1);" />
+        <a href="https://www.linkedin.com/in/asish372" target="_blank">LinkedIn</a>
+      </div>
+      <div class="contact-box">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="filter: invert(1);" />
+        <a href="https://instagram.com/asishrealm" target="_blank">Instagram</a>
+      </div>
+      <div class="contact-box">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Gmail" style="filter: invert(1);" />
+        <a href="mailto:work.asishbindhani@gmail.com">Gmail</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80 },
+        "size": { "value": 3 },
+        "color": { "value": "#ffffff" },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
